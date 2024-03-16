@@ -65,3 +65,7 @@ Contributions are welcome! If you have any suggestions, bug fixes, or feature im
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Prototype
+
+This is the Sketch which is made by using **Figma**: [see](https://www.figma.com/file/IapYx730M35a6Fak3ddliu/Weather-App?type=design&node-id=0%3A1&mode=design&t=MiGGna8XxXpsM3qn-1)
