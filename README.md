@@ -39,17 +39,24 @@ cd Online-Weather-Forecast
 
 To customize the API key used in the project, follow these steps:
 
-1. Open the `script.js` file located in the `js` directory.
-2. Locate the API key variable (`apiKey`) and replace its value with your own API key.
+1. Open the `script.js` file.
+2. Locate the API key variable (`key`) and replace its value with your own API key.
 3. Save the changes.
 
-## REST API Details
+## API Details
 
 The project utilizes the following REST APIs:
 
 1. **Weather API**: Used to fetch weather information based on location. 
 2. **Maps API**: Utilized for displaying maps.
 3. **News API**: Provides news alerts related to weather.
+
+## Credits
+
+This project utilizes the following APIs:
+
+- **Weather API**: Provided by [WeatherAPI.com](https://www.weatherapi.com/).
+- **Map API**: Provided by [OpenStreetMap](https://www.openstreetmap.org/).
 
 ## Contributing
 
