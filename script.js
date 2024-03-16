@@ -16,13 +16,14 @@ function getLocation() {
 function setPosition(position) {
     x = position.coords.latitude;
     y = position.coords.longitude;
+    console.log(x);
     showCurrentLocation(x, y)
 }
 async function showSearchedLocation(location) {
 
 
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`);
         const data = await response.json();
         if (data["error"]) {
             createPopup();
@@ -76,7 +77,7 @@ function updateTemperature(type) {
         document.getElementById("btn-change-temprature-c").style.opacity = 0.3;
         document.getElementById("btn-change-temprature-f").style.opacity = 1;
     }
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${currentLocation}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${currentLocation}`)
         .then(response => response.json())
         .then(data => {
             document.getElementById("auto-location-temprature").innerHTML = data["current"][newType];
@@ -206,7 +207,7 @@ async function show_future_forecast() {
                 var day = date.getDate().toString().padStart(2, '0');
                 var formattedDate = year + '-' + month + '-' + day;
 
-                fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${currenttLocation}&dt=${formattedDate}`)
+                fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${currenttLocation}&dt=${formattedDate}`)
                     .then(response => response.json())
                     .then(data => {
                         var header = headerRow.insertCell(i);
@@ -309,7 +310,7 @@ window.onload = function () {
 //     let tempCurrentLocation = document.getElementById("auto-location").innerText;
 
 //     console.log(tempCurrentLocation);
-//     fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${tempCurrentLocation}&alerts=yes`)
+//     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${tempCurrentLocation}&alerts=yes`)
 //       .then(response => response.json())
 //       .then(data => {
 //         if (data["alerts"]) {
