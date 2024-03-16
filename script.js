@@ -49,8 +49,7 @@ async function showSearchedLocation(location) {
             outputDiv.style = '';
             outputDiv.innerHTML = ""; 
             smoothScroll("weather-current")
-            await show_future_forecast();
-            await showMaps();
+            await show_future_forecast(); 
         }
     } catch (error) {
         console.error("Error:", error);
