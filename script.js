@@ -16,7 +16,6 @@ function getLocation() {
 function setPosition(position) {
     x = position.coords.latitude;
     y = position.coords.longitude;
-    console.log(x);
     showCurrentLocation(x, y)
 }
 async function showSearchedLocation(location) {
