@@ -89,7 +89,18 @@ function scrollToTop() {
 }
 
 
+window.onload = function () {
+    var darkModeEnabled = localStorage.getItem("darkModeEnabled");
+    var checkbox = document.getElementById("myCheckbox");
+
+    if (darkModeEnabled === "true") {
+        checkbox.checked = true;
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+    }
+}
 function changeMode(checkbox) {
+    localStorage.setItem("darkModeEnabled", checkbox.checked);
+
     if (checkbox.checked) {
         document.documentElement.setAttribute("data-bs-theme", "dark");
     } else {
