@@ -395,7 +395,7 @@
       var table = document.createElement("table");
       table.className = "weather-table";
 
-      fetch(`http://api.weatherapi.com/v1/history.json?key=${key}&q=${tempCurrentLocation}&dt=${toDate}&end_dt=${endDate}`)
+      fetch(`https://api.weatherapi.com/v1/history.json?key=${key}&q=${tempCurrentLocation}&dt=${toDate}&end_dt=${endDate}`)
         .then(response => response.json())
         .then(data => {
           var headerRow = table.insertRow();
